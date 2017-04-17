@@ -1,1 +1,5 @@
 Home page
+- @videos.each do |video|
+  %br
+  = youtube_embed(video)
+  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => youtube_embed(video), :width => "560"}
