@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded",
         for (n = 0; n < v.length; n++) {
             div = document.createElement("div");
             div.setAttribute("data-thumb", v[n].dataset.thumb);
+            div.setAttribute("data-embed", v[n].dataset.embed);
             div.innerHTML = labnolThumb(v[n].dataset.thumb);
             div.onclick = labnolIframe;
             v[n].appendChild(div);
@@ -36,8 +37,7 @@ function labnolThumb(thumb) {
 
 function labnolIframe() {
     var iframe = document.createElement("iframe");
-    var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-    iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+    iframe.setAttribute("src", this.dataset.embed);
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute("allowfullscreen", "1");
     this.parentNode.replaceChild(iframe, this);

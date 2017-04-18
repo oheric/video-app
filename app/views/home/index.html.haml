@@ -1,5 +1,6 @@
 Home page
 - @videos.each do |video|
   %br
+  / # = video["data"]["secure_media"][]
   / %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => youtube_embed(video), :width => "560"}
-  .youtube-player{"data-id" => video["data"]["id"], "data-thumb" => video["data"]["secure_media"]["oembed"]["thumbnail_url"]}
+  .youtube-player{"data-embed" => youtube_embed(video), "data-thumb" => video["data"]["secure_media"]["oembed"]["thumbnail_url"]}
