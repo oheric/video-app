@@ -1,6 +1,6 @@
-- @reddit_videos.each do |rv|
+- @videos.each do |video|
   .row
     .col.m6
-      .youtube-player{"data-embed" => youtube_embed(rv), "data-thumb" => rv["data"]["secure_media"]["oembed"]["thumbnail_url"]}
-    = rv["data"]
+      .youtube-player{"data-thumb" => video.thumbnail_url}
+    / # = video["data"]
   / %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => youtube_embed(video), :width => "560"}

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20170503073949) do
     t.string   "name"
     t.string   "youtube_url"
     t.string   "subreddit"
-    t.string   "type"
+    t.string   "video_type"
     t.string   "thumbnail_url"
     t.text     "body"
     t.text     "abstract"
