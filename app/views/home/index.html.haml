@@ -1,6 +1,6 @@
 .row
   - @videos.each do |video|
-    .col.m6
+    .col.m4
       .youtube-player{"data-embed" => youtube_embed(video), "data-thumb" => video.thumbnail_url}
     / # = video["data"]
   / %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => youtube_embed(video), :width => "560"}
