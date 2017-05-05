@@ -7,16 +7,20 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    %nav
+    %nav.nav-extended
       .nav-wrapper
-        %a.brand-logo.center{:href => "#"} Logo
-        %ul#nav-mobile.left.hide-on-med-and-down
-          %li
-            %a{:href => "sass.html"} Sass
-          %li
-            %a{:href => "badges.html"} Components
-          %li
-            %a{:href => "collapsible.html"} JavaScript
+        %a.brand-logo.center{:href => "#"} Vidmeow!
+      .nav-content
+        %ul.tabs.tabs-transparent
+          %li.tab
+            %a{:href => "#test1"} Test 1
+          %li.tab
+            %a.active{:href => "#test2"} Test 2
+          %li.tab.disabled
+            %a{:href => "#test3"} Disabled Tab
+          %li.tab
+            %a{:href => "#test4"} Test 4
+
 
     .container
       = yield
