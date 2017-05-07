@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20170503073949) do
 
   create_table "videos", force: true do |t|
     t.string   "name"
-    t.string   "youtube_url"
+    t.text     "youtube_url"
     t.string   "subreddit"
     t.string   "video_type"
-    t.string   "thumbnail_url"
+    t.text     "thumbnail_url"
     t.text     "body"
     t.text     "abstract"
     t.string   "view_count"
