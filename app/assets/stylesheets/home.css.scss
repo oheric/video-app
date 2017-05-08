@@ -1,13 +1,13 @@
 .card {
+  overflow: hidden;
+  box-shadow: none;
+  border-radius: 0px;
   .card-image {
+    .card-title {
+      font-size: 18px;
+    }
     img {
       position: absolute;
-    }
-  }
-  .card-content {
-    .card-title {
-      text-align: center;
-      color: #2D2C33;
     }
   }
 }
