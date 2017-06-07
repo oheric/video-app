@@ -1,13 +1,16 @@
-- @reddit_videos.each do |video|
-  - video.each do |v|
-    = v[1]["url"]
-/ .row
-/   - @videos.each do |video|
-/     .col.s12.m4
-/       .card
-/         .card-image
-/           .youtube-player{"data-embed" => video, "data-thumb" => video.thumbnail_url}
-/           %span.card-title
-/             video.name
+
+/ - @reddit_videos.each do |video|
+/   - video.each do |v|
+/     = v[1]["url"]
+
+
+.row
+  - @video_array.each do |video|
+    .col.s12.m4
+      .card
+        .card-image
+          .youtube-player{"data-embed" => video, "data-thumb" => video.thumbnail_url}
+          %span.card-title
+            video.name
 
 / %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => youtube_embed(video), :width => "560"}
