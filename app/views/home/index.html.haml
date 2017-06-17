@@ -3,12 +3,12 @@
 /   %li
 /     = video["data"]["secure_media"]["oembed"]["html"]
 .row
-  - @videos.each do |video|
+  - @video_array.each do |video|
     .col.s12.m4
       .card
         .card-image
-          .youtube-player{"data-embed" => youtube_embed(video), "data-thumb" => video.thumbnail_url}
+          .youtube-player{"data-embed" => video, "data-thumb" => video.thumbnail_url}
           %span.card-title
-            = video.name
+            video.name
 
 / %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => youtube_embed(video), :width => "560"}

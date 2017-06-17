@@ -5,6 +5,7 @@ gem 'rails', '4.0.4'
 gem "haml-rails", "~> 0.9"
 gem "httparty"
 gem "materialize-sass"
+gem "ruby-oembed"
 
 # Use postgresql as the database for Active Record
 gem 'pg'
