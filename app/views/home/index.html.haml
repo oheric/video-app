@@ -1,5 +1,7 @@
+/ %ul
 / - @reddit_videos.each do |video|
-/   = video["data"]
+/   %li
+/     = video["data"]["secure_media"]["oembed"]["html"]
 .row
   - @videos.each do |video|
     .col.s12.m4
